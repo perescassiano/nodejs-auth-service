@@ -10,7 +10,7 @@ To get started with the User Authentication API, follow the steps below:
 
 2. Install the dependencies:
 
-- ```cd user-auth-api ```
+- ```cd nodejs-auth-service ```
 - ``` npm install ```
 
 3. Set up the environment variables:
