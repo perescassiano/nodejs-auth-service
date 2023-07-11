@@ -17,9 +17,8 @@ To get started with the User Authentication API, follow the steps below:
 
 - Create a `.env` file in the root directory.
 - Define the following environment variables in the `.env` file:
-  - `DB_HOST`: Database host
-  - `DB_PORT`: Database port
-  - `DB_NAME`: Database name
+  - `MONGO_DB_URL`: Database host
+  - `PORT`: Server port
   - `JWT_SECRET`: Secret key for JWT authentication
 
 4. Run MongoDB on Docker
