@@ -22,11 +22,16 @@ To get started with the User Authentication API, follow the steps below:
   - `DB_NAME`: Database name
   - `JWT_SECRET`: Secret key for JWT authentication
 
-5. The API will be available at `http://localhost:3000`.
+4. Run MongoDB on Docker
 
-4. Start the server:
+```docker pull mongo:latest```
+
+5. Start the server:
 
 - ``` npm start ```
+
+6. The API will be available at `http://localhost:3000`.
+
 
 ## Endpoints
 
