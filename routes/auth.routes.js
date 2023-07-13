@@ -7,14 +7,23 @@ const {
     resetPasswordController,
 } = require("../controllers/auth.controller");
 
+const {
+    validate,
+    signUpValidationRules,
+    signInValidationRules,
+    resetPasswordRequestValidationRules,
+    resetPasswordValidationRules,
+} = require("../middlewares/validations.middleware");
+
 const router = express.Router();
 
-router.post("/auth/login", signInController);
+// Apply validation rules to the appropriate routes
+router.post("/auth/login", validate(signInValidationRules), signInController);
 
-router.post("/auth/signup", signUpController);
+router.post("/auth/signup", validate(signUpValidationRules), signUpController);
 
-router.post("/auth/requestResetPassword", resetPasswordRequestController);
+router.post("/auth/requestResetPassword", validate(resetPasswordRequestValidationRules), resetPasswordRequestController);
 
-router.post("/auth/resetPassword", resetPasswordController);
+router.post("/auth/resetPassword", validate(resetPasswordValidationRules), resetPasswordController);
 
 module.exports = router;
